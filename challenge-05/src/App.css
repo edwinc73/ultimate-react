@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 5rem;
+}
+
+.inputs,
+.output {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.question {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  font-size: 1.33rem;
+  height: 2rem;
+  border: 1px solid black;
+  width: 600px;
+  box-sizing: content-box;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.question input,
+.question select {
+  width: 175px;
+}
+
+.output {
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.output button {
+  background-color: rgb(113, 61, 255);
+  color: white;
+  border: none;
+  height: 30px;
+  width: 120px;
+  border-radius: 5px;
+}
+
+#currency {
+  position: absolute;
+  right: 5rem;
+}
