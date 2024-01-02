@@ -1,42 +1,78 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Taken from getting started guide at: https://leafletjs.com/examples/quick-start/ */
+@import "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css";
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap";
+
+/* These CSS variables are global, so they are available in all CSS modules */
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+
+  --color-dark--0: #242a2e;
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: #d6dee0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--color-light--2);
+  font-weight: 400;
+  line-height: 1.6;
 }
 
-.card {
-  padding: 2em;
+label {
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
-.read-the-docs {
-  color: #888;
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-light--3);
+  transition: all 0.2s;
 }
+
+input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.cta:link,
+.cta:visited {
+  display: inline-block;
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--1);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+}
+
+/*
+"importCSSModule": {
+    "prefix": "csm",
+    "scope": "javascript,typescript,javascriptreact",
+    "body": ["import styles from './${TM_FILENAME_BASE}.module.css'"],
+    "description": "Import CSS Module as `styles`"
+  },
+*/
